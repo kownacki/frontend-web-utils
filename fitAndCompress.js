@@ -39,7 +39,7 @@ const calculateCropAndResize = (fit, maxWidth, maxHeight, srcWidth, srcHeight) =
 // Based on goo.gl/DEP8Y
 // fit - 'cover' or 'scale-down'
 // quality - Quality of compressed jpeg image. Number between 0 and 1
-export default async (fit = 'scale-down', maxWidth = Infinity, maxHeight = Infinity, quality, imageFile) => {
+export const fitAndCompress = async (fit = 'scale-down', maxWidth = Infinity, maxHeight = Infinity, quality, imageFile) => {
   const img = document.createElement('img');
   const canvas = document.createElement('canvas');
   img.src = URL.createObjectURL(imageFile);

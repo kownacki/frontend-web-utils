@@ -1,4 +1,4 @@
-export default {
+export const loadingDots = {
   css: (small) => `
     .loading {
       font-family: sans-serif;
@@ -49,4 +49,4 @@ export default {
       ${slot}
     </div>
   `,
-}
+};

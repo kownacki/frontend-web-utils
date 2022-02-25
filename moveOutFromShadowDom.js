@@ -1,6 +1,6 @@
 import {sleep} from 'mk-js-utils';
 
-export default async (contentsElement) => {
+export const moveOutFromShadowDom = async (contentsElement) => {
   await sleep();
   const id = _.random(0, 1000000000);
 
