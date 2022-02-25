@@ -7,12 +7,12 @@ export const staticProp = (object) => {
 };
 
 //todo Fix unintentional caching results just like cache directive. Idea: Create own directive.
-const dynamicElements = new WeakMap;
-export const dynamicElement = (host, key, tagName, props, attrs) => {
-  const dynamicElementsOfHost = dynamicElements.get(host) || new Map;
-  dynamicElements.set(host, dynamicElementsOfHost);
-  const element = dynamicElementsOfHost.get(key) || document.createElement(tagName);
-  dynamicElementsOfHost.set(key, element);
+const staticElements = new WeakMap;
+export const staticElement = (host, key, tagName, props, attrs) => {
+  const staticElementsOfHost = staticElements.get(host) || new Map;
+  staticElements.set(host, staticElementsOfHost);
+  const element = staticElementsOfHost.get(key) || document.createElement(tagName);
+  staticElementsOfHost.set(key, element);
   mapValuesAndKeys(_, (attrValue, attrName) => element.setAttribute(attrName, attrValue), attrs);
   return Object.assign(element, props);
 };
