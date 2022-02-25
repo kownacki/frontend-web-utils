@@ -2,5 +2,8 @@
   "name": "mk-frontend-web-utils",
   "version": "0.1.0",
   "type": "module",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "mk-js-utils": "git+https://github.com/kownacki/mk-js-utils.git#master"
+  }
 }
