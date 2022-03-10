@@ -3,7 +3,17 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
   "dependencies": {
     "mk-js-utils": "git+https://github.com/kownacki/mk-js-utils.git#master"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
 }
